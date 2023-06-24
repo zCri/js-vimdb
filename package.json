@@ -44,7 +44,7 @@
         "docs": "typedoc --options typedoc.json --disableSources",
         "lint": "eslint . --fix --ext .ts",
         "start": "node --loader ts-node/esm --es-module-specifier-resolution=node --trace-warnings src/index.ts",
-        "test": "node --experimental-vm-modules node_modules/.bin/jest"
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
     },
     "repository": {
         "type": "git",

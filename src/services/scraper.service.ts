@@ -198,7 +198,7 @@ export default class ScraperService {
 
     // region - Show Info
     private scrapShowName($: cheerio.Root): string {
-        const value = $('h1[class^="TitleHeader"]').text();
+        const value = $('h1[data-testid^="hero__pageTitle"]').text();
         return decode(value).trim();
     }
 
@@ -214,7 +214,7 @@ export default class ScraperService {
     }
 
     private scrapDescription($: cheerio.Root): string {
-        const value = $('div[data-testid="storyline-plot-summary"] > div > div').html();
+        const value = $('div[data-testid="plot"] > span[testid="plot-x1"]').html();
         return value?.includes('<span') ? value.leftOf('<span') : value;
     }
 
