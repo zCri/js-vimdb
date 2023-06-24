@@ -214,7 +214,7 @@ export default class ScraperService {
     }
 
     private scrapDescription($: cheerio.Root): string {
-        const value = $('p[data-testid="plot"] > span[testid="plot-x1"]').html();
+        const value = $('p[data-testid="plot"] > span[testid="plot-xl"]').html();
         return value?.includes('<span') ? value.leftOf('<span') : value;
     }
 
